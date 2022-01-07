@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  APIService.swift
 //  SwifTube
 //
 //  Created by waheedCodes on 07/01/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Model {
+class APIService {
     
     func getVideos() {
         

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var model = Model()
+    var model = APIService()
 
     override func viewDidLoad() {
         super.viewDidLoad()

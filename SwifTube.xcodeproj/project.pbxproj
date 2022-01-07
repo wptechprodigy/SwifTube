@@ -15,7 +15,7 @@
 		04BCEDDA2787841A00221E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BCEDD82787841A00221E14 /* LaunchScreen.storyboard */; };
 		04BCEDE227879AE600221E14 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDE127879AE600221E14 /* Constants.swift */; };
 		04BCEDE427879FE400221E14 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDE327879FE400221E14 /* Video.swift */; };
-		04BCEDE62787B00F00221E14 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDE52787B00F00221E14 /* Model.swift */; };
+		04BCEDE62787B00F00221E14 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDE52787B00F00221E14 /* APIService.swift */; };
 		04BCEDE827881D1D00221E14 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDE727881D1D00221E14 /* ConstantsTemplate.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		04BCEDDB2787841A00221E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BCEDE127879AE600221E14 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04BCEDE327879FE400221E14 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
-		04BCEDE52787B00F00221E14 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		04BCEDE52787B00F00221E14 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		04BCEDE727881D1D00221E14 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +100,7 @@
 		043F8530278884C900C30DF5 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				04BCEDE52787B00F00221E14 /* Model.swift */,
+				04BCEDE52787B00F00221E14 /* APIService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				04BCEDD22787841500221E14 /* ViewController.swift in Sources */,
 				04BCEDCE2787841500221E14 /* AppDelegate.swift in Sources */,
 				04BCEDD02787841500221E14 /* SceneDelegate.swift in Sources */,
-				04BCEDE62787B00F00221E14 /* Model.swift in Sources */,
+				04BCEDE62787B00F00221E14 /* APIService.swift in Sources */,
 				04BCEDE227879AE600221E14 /* Constants.swift in Sources */,
 				04BCEDE427879FE400221E14 /* Video.swift in Sources */,
 			);
