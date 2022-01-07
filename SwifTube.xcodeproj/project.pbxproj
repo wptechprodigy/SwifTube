@@ -45,6 +45,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		043F852A27883AC200C30DF5 /* Application Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDCD2787841500221E14 /* AppDelegate.swift */,
+				04BCEDCF2787841500221E14 /* SceneDelegate.swift */,
+			);
+			path = "Application Delegates";
+			sourceTree = "<group>";
+		};
+		043F852B27883AD600C30DF5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDD62787841A00221E14 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		043F852C27883B6800C30DF5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDD32787841500221E14 /* Main.storyboard */,
+				04BCEDD82787841A00221E14 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		043F852D27884C1F00C30DF5 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDE727881D1D00221E14 /* ConstantsTemplate.swift */,
+				04BCEDE127879AE600221E14 /* Constants.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		043F852E27884C2F00C30DF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDE327879FE400221E14 /* Video.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		043F852F2788847000C30DF5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				043F852C27883B6800C30DF5 /* Storyboards */,
+				04BCEDD12787841500221E14 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		043F8530278884C900C30DF5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDE52787B00F00221E14 /* Model.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		04BCEDC12787841500221E14 = {
 			isa = PBXGroup;
 			children = (
@@ -64,17 +124,13 @@
 		04BCEDCC2787841500221E14 /* SwifTube */ = {
 			isa = PBXGroup;
 			children = (
-				04BCEDCD2787841500221E14 /* AppDelegate.swift */,
-				04BCEDCF2787841500221E14 /* SceneDelegate.swift */,
-				04BCEDD12787841500221E14 /* ViewController.swift */,
-				04BCEDE727881D1D00221E14 /* ConstantsTemplate.swift */,
-				04BCEDD32787841500221E14 /* Main.storyboard */,
-				04BCEDD62787841A00221E14 /* Assets.xcassets */,
-				04BCEDD82787841A00221E14 /* LaunchScreen.storyboard */,
+				043F852A27883AC200C30DF5 /* Application Delegates */,
+				043F852F2788847000C30DF5 /* Views */,
+				043F852D27884C1F00C30DF5 /* Commons */,
+				043F852B27883AD600C30DF5 /* Resources */,
 				04BCEDDB2787841A00221E14 /* Info.plist */,
-				04BCEDE127879AE600221E14 /* Constants.swift */,
-				04BCEDE52787B00F00221E14 /* Model.swift */,
-				04BCEDE327879FE400221E14 /* Video.swift */,
+				043F8530278884C900C30DF5 /* API */,
+				043F852E27884C2F00C30DF5 /* Model */,
 			);
 			path = SwifTube;
 			sourceTree = "<group>";
