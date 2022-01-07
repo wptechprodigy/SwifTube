@@ -11,7 +11,7 @@ class Model {
     
     func getVideos() {
         
-        guard let url = URL(string: Constants.API_URL) else {
+        guard let url = URL(string: ConstantsTemplate.API_URL) else {
             return
         }
         
