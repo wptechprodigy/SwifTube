@@ -23,6 +23,16 @@ class APIService {
                 if error != nil || data == nil {
                     return 
                 }
+                
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                do {
+                    let videoList = try decoder.decode(Response.self, from: data!)
+                    dump(videoList)
+                } catch {
+                    print("Error: \(error)")
+                }
         }
         
         dataTask.resume()
