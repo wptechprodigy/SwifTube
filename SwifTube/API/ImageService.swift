@@ -15,6 +15,12 @@ class ImageService {
     func getImage(from thumbnailURL: String,
                   completion: @escaping VideoThumbnail) {
         
+        if let cachedData = CacheManager.getVideoCache(thumbnailURL) {
+            let cachedImage = UIImage(data: cachedData)!
+            completion(cachedImage)
+            return
+        }
+        
         guard let url = URL(string: thumbnailURL) else {
             return
         }
@@ -24,10 +30,12 @@ class ImageService {
         let dataTask = session.dataTask(with: url) { data, response, error in
             
             if error == nil && data != nil {
+                
                 if url.absoluteString != thumbnailURL {
                     return
                 }
                 
+                CacheManager.setVideoCache(thumbnailURL, data: data)
                 let videoThumbnail = UIImage(data: data!)!
                 
                 DispatchQueue.main.async {
