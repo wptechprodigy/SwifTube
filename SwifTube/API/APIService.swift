@@ -7,9 +7,11 @@
 
 import Foundation
 
-class APIService {
+final class APIService {
     
-    func getVideos() {
+    typealias FetchedVideos = ([Video]) -> Void
+    
+    func getVideos(completion: @escaping FetchedVideos) {
         
         guard let url = URL(string: Constants.API_URL) else {
             return
@@ -29,7 +31,10 @@ class APIService {
                 
                 do {
                     let videoList = try decoder.decode(Response.self, from: data!)
-                    dump(videoList)
+                    
+                    DispatchQueue.main.async {
+                        completion(videoList.items)
+                    }
                 } catch {
                     print("Error: \(error)")
                 }
