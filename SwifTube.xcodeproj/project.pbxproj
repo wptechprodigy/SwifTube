@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		043F8532278890A100C30DF5 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F8531278890A100C30DF5 /* Response.swift */; };
 		043F85342788997200C30DF5 /* ConstantsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F85332788997200C30DF5 /* ConstantsTemplate.swift */; };
+		043F85382789F63B00C30DF5 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F85372789F63B00C30DF5 /* VideoCell.swift */; };
+		043F853A2789FAA300C30DF5 /* DateFoermatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F85392789FAA300C30DF5 /* DateFoermatter.swift */; };
+		043F853C2789FB7E00C30DF5 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F853B2789FB7E00C30DF5 /* ImageService.swift */; };
 		04BCEDCE2787841500221E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDCD2787841500221E14 /* AppDelegate.swift */; };
 		04BCEDD02787841500221E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDCF2787841500221E14 /* SceneDelegate.swift */; };
 		04BCEDD22787841500221E14 /* VideoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDD12787841500221E14 /* VideoListController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		043F8531278890A100C30DF5 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		043F85332788997200C30DF5 /* ConstantsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTemplate.swift; sourceTree = "<group>"; };
+		043F85372789F63B00C30DF5 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		043F85392789FAA300C30DF5 /* DateFoermatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFoermatter.swift; sourceTree = "<group>"; };
+		043F853B2789FB7E00C30DF5 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		04BCEDCA2787841500221E14 /* SwifTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwifTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BCEDCD2787841500221E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BCEDCF2787841500221E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			children = (
 				04BCEDE127879AE600221E14 /* Constants.swift */,
 				043F85332788997200C30DF5 /* ConstantsTemplate.swift */,
+				043F85392789FAA300C30DF5 /* DateFoermatter.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -94,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				043F852C27883B6800C30DF5 /* Storyboards */,
-				04BCEDD12787841500221E14 /* VideoListController.swift */,
+				043F85362789F60300C30DF5 /* View Controllers */,
+				043F85352789F5F300C30DF5 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,8 +112,25 @@
 			children = (
 				04BCEDE52787B00F00221E14 /* APIService.swift */,
 				043F8531278890A100C30DF5 /* Response.swift */,
+				043F853B2789FB7E00C30DF5 /* ImageService.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		043F85352789F5F300C30DF5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				043F85372789F63B00C30DF5 /* VideoCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		043F85362789F60300C30DF5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04BCEDD12787841500221E14 /* VideoListController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		04BCEDC12787841500221E14 = {
@@ -211,10 +236,13 @@
 			files = (
 				043F8532278890A100C30DF5 /* Response.swift in Sources */,
 				04BCEDD22787841500221E14 /* VideoListController.swift in Sources */,
+				043F853A2789FAA300C30DF5 /* DateFoermatter.swift in Sources */,
+				043F85382789F63B00C30DF5 /* VideoCell.swift in Sources */,
 				04BCEDCE2787841500221E14 /* AppDelegate.swift in Sources */,
 				043F85342788997200C30DF5 /* ConstantsTemplate.swift in Sources */,
 				04BCEDD02787841500221E14 /* SceneDelegate.swift in Sources */,
 				04BCEDE62787B00F00221E14 /* APIService.swift in Sources */,
+				043F853C2789FB7E00C30DF5 /* ImageService.swift in Sources */,
 				04BCEDE227879AE600221E14 /* Constants.swift in Sources */,
 				04BCEDE427879FE400221E14 /* Video.swift in Sources */,
 			);

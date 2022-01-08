@@ -10,6 +10,7 @@ import UIKit
 class VideoListController: UITableViewController {
     
     var apiService: APIService = APIService()
+    var imageService: ImageService = ImageService.shared
     private var videoList: [Video] = []
 
     override func viewDidLoad() {
@@ -35,10 +36,11 @@ class VideoListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell",
-                                                 for: indexPath)
-        let videoTitle = videoList[indexPath.row].title
-        cell.textLabel?.text = videoTitle
+        let cell = tableView.dequeueReusableCell(withIdentifier: VideoCell.identifier,
+                                                 for: indexPath) as! VideoCell
+        cell.imageService = imageService
+        let video = videoList[indexPath.row]
+        cell.configureCell(with: video)
         return cell
     }
     

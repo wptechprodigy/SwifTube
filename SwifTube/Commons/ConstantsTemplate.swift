@@ -8,7 +8,7 @@
 import Foundation
 
 /*
-struct ConstantsTemplate {
+struct Constants {
     
     static var API_KEY = ""
     static var PLAYLIST_ID = ""

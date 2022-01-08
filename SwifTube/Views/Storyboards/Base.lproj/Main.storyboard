@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGw-Uu-KA0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19455"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,13 +16,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="B8l-Mr-obP">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoCell" id="B8l-Mr-obP" customClass="VideoCell" customModule="SwifTube" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="305.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B8l-Mr-obP" id="Xbl-KO-did">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="305.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-a0-dib">
+                                            <rect key="frame" x="16" y="16" width="382" height="273.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="mk7-yN-P9Y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="382" height="215"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mk7-yN-P9Y" secondAttribute="height" multiplier="1280:720" id="jIo-PJ-rip"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-qD-0QA">
+                                                    <rect key="frame" x="0.0" y="223" width="382" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF5-t6-xQh">
+                                                    <rect key="frame" x="0.0" y="253" width="382" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FPf-a0-dib" firstAttribute="leading" secondItem="Xbl-KO-did" secondAttribute="leading" constant="16" id="4HZ-uy-xnQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="FPf-a0-dib" secondAttribute="trailing" constant="16" id="NoL-Vi-2D1"/>
+                                        <constraint firstItem="FPf-a0-dib" firstAttribute="top" secondItem="Xbl-KO-did" secondAttribute="top" constant="16" id="l7H-Nm-5m4"/>
+                                        <constraint firstAttribute="bottom" secondItem="FPf-a0-dib" secondAttribute="bottom" constant="16" id="lPL-Ri-nkG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="WF5-t6-xQh" id="liD-xd-stS"/>
+                                    <outlet property="thumbnailImageView" destination="mk7-yN-P9Y" id="iv0-Lf-JtN"/>
+                                    <outlet property="titleLabel" destination="LpX-qD-0QA" id="Vqd-Xa-udO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
