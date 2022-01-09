@@ -18,6 +18,16 @@ class VideoListController: UITableViewController {
         getVideoList()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedVideoIndexPath = tableView.indexPathForSelectedRow else {
+            return
+        }
+        
+        let selectedVideo = videoList[selectedVideoIndexPath.row]
+        let videoDetailViewController = segue.destination as! VideoDetailViewController
+        videoDetailViewController.video = selectedVideo
+    }
+    
     // MARK: - Helper Methods
     
     private func getVideoList() {

@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QGw-Uu-KA0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19455"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,6 +59,7 @@
                                     <outlet property="dateLabel" destination="WF5-t6-xQh" id="liD-xd-stS"/>
                                     <outlet property="thumbnailImageView" destination="mk7-yN-P9Y" id="iv0-Lf-JtN"/>
                                     <outlet property="titleLabel" destination="LpX-qD-0QA" id="Vqd-Xa-udO"/>
+                                    <segue destination="JS8-Kq-ncv" kind="show" id="fnv-wP-UpF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,8 +73,77 @@
             </objects>
             <point key="canvasLocation" x="66" y="93"/>
         </scene>
+        <!--Video Detail View Controller-->
+        <scene sceneID="Bn3-Dq-4QP">
+            <objects>
+                <viewController id="JS8-Kq-ncv" customClass="VideoDetailViewController" customModule="SwifTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E1T-U1-dZs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MVB-Ev-hIW">
+                                <rect key="frame" x="16" y="16" width="382" height="792"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-38-KWx">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwt-UZ-Cp3">
+                                        <rect key="frame" x="0.0" y="29.5" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gl-cq-Oe4">
+                                        <rect key="frame" x="0.0" y="58" width="382" height="215"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5gl-cq-Oe4" secondAttribute="height" multiplier="1280:720" id="fB8-dd-VQs"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1fq-v8-4s9">
+                                        <rect key="frame" x="0.0" y="281" width="382" height="511"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="z6o-12-uSV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="z6o-12-uSV" firstAttribute="bottom" secondItem="MVB-Ev-hIW" secondAttribute="bottom" id="WlM-9A-m7z"/>
+                            <constraint firstItem="MVB-Ev-hIW" firstAttribute="top" secondItem="z6o-12-uSV" secondAttribute="top" constant="16" id="ZDW-pg-RdF"/>
+                            <constraint firstItem="z6o-12-uSV" firstAttribute="trailing" secondItem="MVB-Ev-hIW" secondAttribute="trailing" constant="16" id="k3A-Qu-hJ7"/>
+                            <constraint firstItem="MVB-Ev-hIW" firstAttribute="leading" secondItem="z6o-12-uSV" secondAttribute="leading" constant="16" id="zF7-TH-mYi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8A3-qE-0C0"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="pwt-UZ-Cp3" id="nB8-ON-FGC"/>
+                        <outlet property="descriptionTextView" destination="1fq-v8-4s9" id="9rC-rt-IiG"/>
+                        <outlet property="titleLabel" destination="ZOe-38-KWx" id="t3d-JM-Tve"/>
+                        <outlet property="webView" destination="5gl-cq-Oe4" id="FYL-jx-zeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5QI-mc-sJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="843" y="92"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

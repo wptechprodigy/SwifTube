@@ -13,6 +13,7 @@
 		043F853A2789FAA300C30DF5 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F85392789FAA300C30DF5 /* DateFormatter.swift */; };
 		043F853C2789FB7E00C30DF5 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F853B2789FB7E00C30DF5 /* ImageService.swift */; };
 		043F853F278A356200C30DF5 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F853E278A356200C30DF5 /* CacheManager.swift */; };
+		043F8541278ADBC400C30DF5 /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F8540278ADBC400C30DF5 /* VideoDetailViewController.swift */; };
 		04BCEDCE2787841500221E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDCD2787841500221E14 /* AppDelegate.swift */; };
 		04BCEDD02787841500221E14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDCF2787841500221E14 /* SceneDelegate.swift */; };
 		04BCEDD22787841500221E14 /* VideoListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCEDD12787841500221E14 /* VideoListController.swift */; };
@@ -31,6 +32,7 @@
 		043F85392789FAA300C30DF5 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		043F853B2789FB7E00C30DF5 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		043F853E278A356200C30DF5 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		043F8540278ADBC400C30DF5 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewController.swift; sourceTree = "<group>"; };
 		04BCEDCA2787841500221E14 /* SwifTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwifTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BCEDCD2787841500221E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BCEDCF2787841500221E14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				04BCEDD12787841500221E14 /* VideoListController.swift */,
+				043F8540278ADBC400C30DF5 /* VideoDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				043F8532278890A100C30DF5 /* Response.swift in Sources */,
 				04BCEDD22787841500221E14 /* VideoListController.swift in Sources */,
+				043F8541278ADBC400C30DF5 /* VideoDetailViewController.swift in Sources */,
 				043F853A2789FAA300C30DF5 /* DateFormatter.swift in Sources */,
 				043F85382789F63B00C30DF5 /* VideoCell.swift in Sources */,
 				043F853F278A356200C30DF5 /* CacheManager.swift in Sources */,
