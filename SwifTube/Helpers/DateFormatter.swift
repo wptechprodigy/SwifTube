@@ -9,6 +9,6 @@ import Foundation
 
 func formatDate(_ date: Date) -> String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+    dateFormatter.dateFormat = Constants.dateFormatText
     return dateFormatter.string(from: date)
 }
